@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public Player_Controls playerControls;
-
-    Vector2 moveDirection = Vector2.zero;
+    private Rigidbody2D rb;
+    private Vector2 moveDirection = Vector2.zero;
     private InputAction move;
+    private Player_Controls playerControls;
 
+    private bool isJumping = false;
+    public float speed = 5f;
+
+    #region Funções de Inicialização
     private void Awake()
     {
         playerControls = new Player_Controls();
@@ -28,22 +27,53 @@ public class NewBehaviourScript : MonoBehaviour
     {
         move.Disable();
     }
+    #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        rb.velocity = moveCharacter(); 
+        rb.velocity = MoveCharacter();
     }
 
-    private Vector2 moveCharacter()
+    private Vector2 MoveCharacter()
     {
-        moveDirection = move.ReadValue<Vector2>();
+        moveDirection = (move.ReadValue<Vector2>()) * speed;
         return moveDirection;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Ground"))
+        {
+            isJumping = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            move.Disable();
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            move.Enable();
+        }
     }
 }
