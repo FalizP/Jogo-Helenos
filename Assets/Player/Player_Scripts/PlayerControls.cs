@@ -62,6 +62,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UI_Actions"",
+                    ""type"": ""Button"",
+                    ""id"": ""5dfd6fe4-024d-40ee-8e89-5ebbbbcdc5fc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -293,6 +302,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Interacting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3693d8d0-cbec-4985-8057-13ec5def0a01"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""UI_Actions"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -884,6 +904,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Interacting = m_Player.FindAction("Interacting", throwIfNotFound: true);
+        m_Player_UI_Actions = m_Player.FindAction("UI_Actions", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -961,6 +982,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Interacting;
+    private readonly InputAction m_Player_UI_Actions;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -969,6 +991,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Interacting => m_Wrapper.m_Player_Interacting;
+        public InputAction @UI_Actions => m_Wrapper.m_Player_UI_Actions;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -990,6 +1013,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interacting.started += instance.OnInteracting;
             @Interacting.performed += instance.OnInteracting;
             @Interacting.canceled += instance.OnInteracting;
+            @UI_Actions.started += instance.OnUI_Actions;
+            @UI_Actions.performed += instance.OnUI_Actions;
+            @UI_Actions.canceled += instance.OnUI_Actions;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1006,6 +1032,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interacting.started -= instance.OnInteracting;
             @Interacting.performed -= instance.OnInteracting;
             @Interacting.canceled -= instance.OnInteracting;
+            @UI_Actions.started -= instance.OnUI_Actions;
+            @UI_Actions.performed -= instance.OnUI_Actions;
+            @UI_Actions.canceled -= instance.OnUI_Actions;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1192,6 +1221,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnInteracting(InputAction.CallbackContext context);
+        void OnUI_Actions(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
