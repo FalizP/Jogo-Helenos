@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -46,6 +44,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
+        Time.timeScale = 1;
 
         rb = GetComponent<Rigidbody2D>();
     }

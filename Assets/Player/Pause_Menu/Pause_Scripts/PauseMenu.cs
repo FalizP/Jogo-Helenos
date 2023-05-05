@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -42,7 +43,13 @@ public class PauseMenu : MonoBehaviour
     {
         const int PAUSE = 0;
         const int RESUME = 1;
-
         Time.timeScale = Time.timeScale == RESUME ? PAUSE : RESUME;
+    }
+
+
+    public void Btn_MenuPrinciapl()
+    {
+        string nomeCena = "Menu_Principal";
+        SceneManager.LoadScene(nomeCena);
     }
 }
