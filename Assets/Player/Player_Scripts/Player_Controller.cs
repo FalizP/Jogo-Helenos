@@ -5,16 +5,11 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-
     private Vector2 moveDirection = Vector2.zero;
     private PlayerControls playerControls;
     private InputAction move;
-    private InputAction interacting;
 
-    private bool isJumping = false;
-
-    [SerializeField] private float speed = 650;
+    [SerializeField] private float speed = 1000;
 
     #region Inventário
     private List<string> keys = new List<string>();
@@ -30,9 +25,6 @@ public class PlayerController : MonoBehaviour
     {
         move = playerControls.Player.Move;
         move.Enable();
-
-        interacting = playerControls.Player.Interacting;
-        interacting.Enable();
     }
 
     private void OnDisable()
@@ -45,8 +37,6 @@ public class PlayerController : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         Time.timeScale = 1;
-
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -56,27 +46,13 @@ public class PlayerController : MonoBehaviour
 
     private void MoveCharacter()
     {
-        moveDirection = move.ReadValue<Vector2>();
-        rb.velocity = speed * moveDirection.normalized;
+        moveDirection += speed * Time.deltaTime * move.ReadValue<Vector2>().normalized;
+        transform.position = moveDirection;
+        // Movimentação usando RigidBody2D
+        // rb.velocity = speed * moveDirection.normalized;
     }
 
     #region Detecção de Colisões
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Ground"))
-        {
-            isJumping = false;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Ground"))
-        {
-            isJumping = true;
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
