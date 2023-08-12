@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     private InputAction move;
 
-    [SerializeField] private float speed = 1000;
+    [SerializeField] private float speed = 5;
 
     #region Inventário
     private List<string> keys = new List<string>();
