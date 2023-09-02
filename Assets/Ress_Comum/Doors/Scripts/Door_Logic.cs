@@ -33,7 +33,6 @@ public class Door_Logic : MonoBehaviour
     void Update()
     {
         AbrirPorta();
-        print(canInteract);
     }
 
     private void AbrirPorta()
