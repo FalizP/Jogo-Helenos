@@ -4,17 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private PlayerControls playerControls;
     private InputAction UI_Actions;
-
-    private void Awake()
-    {
-        playerControls = new PlayerControls();
-    }
-
     private void OnEnable()
     {
-        UI_Actions = playerControls.Player.UI_Actions;
         UI_Actions.Enable();
     }
 

@@ -37,11 +37,6 @@ public class Door_Logic : MonoBehaviour
 
     private void AbrirPorta()
     {
-        if (interacting.IsPressed())
-        {
-            print("interagindo");
-        }
-
         if (interacting.IsPressed() && canInteract)
         {
             SceneManager.LoadScene(proximaFase);
