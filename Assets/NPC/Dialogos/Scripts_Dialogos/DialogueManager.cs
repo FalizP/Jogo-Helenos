@@ -25,8 +25,6 @@ public class DialogueManager : MonoBehaviour
 
     private const string PORTRAIT_TAG = "portrait";
 
-    private const string LAYOUT_TAG = "layout";
-
 
     private void Awake()
     {
@@ -98,6 +96,7 @@ public class DialogueManager : MonoBehaviour
             if (splitTag.Length != 2) { Debug.LogError($"Tag não analisada: {tag}"); }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
+            
 
             // Lida com a tag
             switch (tagKey)
@@ -107,9 +106,6 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
-                    print(tagValue);
-                    break;
-                case LAYOUT_TAG:
                     break;
                 default:
                     Debug.LogWarning("");

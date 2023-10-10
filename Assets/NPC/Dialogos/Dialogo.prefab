@@ -202,8 +202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5458c2101fc76484ba5dfe8587d8e0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 4538508009108562290}
   dialoguePanel: {fileID: 404133005046877304}
   dialogueText: {fileID: 6043496387284950029}
+  displayNameText: {fileID: 5326761272891707198}
+  portraitAnimator: {fileID: 2719575393811400330}
 --- !u!1 &1051175358190947259
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +698,7 @@ Transform:
   - {fileID: 6498322711670780843}
   - {fileID: 6092873615110681768}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6597556855467665841
 GameObject:
@@ -709,7 +712,7 @@ GameObject:
   - component: {fileID: 8627592066593008655}
   - component: {fileID: 6043496387284950029}
   m_Layer: 5
-  m_Name: DialogText
+  m_Name: DialogueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,6 +846,7 @@ GameObject:
   - component: {fileID: 6111138224900230664}
   - component: {fileID: 4565360311656695888}
   - component: {fileID: 904414099942831171}
+  - component: {fileID: 2719575393811400330}
   m_Layer: 5
   m_Name: PortraitImage
   m_TagString: Untagged
@@ -908,6 +912,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &2719575393811400330
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944470834361304314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c48343df655e2143bc9333044c99989, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9098978809681675588
 GameObject:
   m_ObjectHideFlags: 0

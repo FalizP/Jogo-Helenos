@@ -200,22 +200,26 @@ PrefabInstance:
       propertyPath: m_CullTransparentMesh
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 245232149734402382, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_Name
+      value: DialogueText
+      objectReference: {fileID: 0}
     - target: {fileID: 858577292621301603, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: Canvas
       value: 
-      objectReference: {fileID: 406575647}
+      objectReference: {fileID: 0}
     - target: {fileID: 858577292621301603, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: dialogueCanvas
       value: 
-      objectReference: {fileID: 406575647}
+      objectReference: {fileID: 0}
     - target: {fileID: 858577292621301603, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: displayNameText
       value: 
-      objectReference: {fileID: 1932408279}
+      objectReference: {fileID: 0}
     - target: {fileID: 858577292621301603, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: portraitAnimator
       value: 
-      objectReference: {fileID: 1839261184}
+      objectReference: {fileID: 0}
     - target: {fileID: 1189770938195313736, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: m_Name
       value: Dialogos
@@ -368,6 +372,10 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 7355507022899782029, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7406865226595543608, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -480,62 +488,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9005276985827935302, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005276985827935302, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: displayNameText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005276985827935302, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: portraitAnimator
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4767790881481783161, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5738955861099759392, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1839261184}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
---- !u!1 &406575647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1227070789669069480, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
-  m_PrefabInstance: {fileID: 310750355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1818753836 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7331218602187556341, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
   m_PrefabInstance: {fileID: 310750355}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1839261180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5738955861099759392, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
-  m_PrefabInstance: {fileID: 310750355}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1839261184
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839261180}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c48343df655e2143bc9333044c99989, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1932408279 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7356383404273781988, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
-  m_PrefabInstance: {fileID: 310750355}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2051875964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -617,6 +592,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 07fcab222bd146a448d4ab450164c572, type: 3}
+    - target: {fileID: 4742372990570481651, guid: c8cd97706cedb9846a73a5471cf48a21, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5702738128775320694, guid: c8cd97706cedb9846a73a5471cf48a21, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -676,7 +655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2847753588764270285, guid: 79c7b8af4a20ee342a75d04667f08f36, type: 3}
       propertyPath: proximaFase
-      value: Pesca_Minigame
+      value: MiniBoss
       objectReference: {fileID: 0}
     - target: {fileID: 4185455386813014721, guid: 79c7b8af4a20ee342a75d04667f08f36, type: 3}
       propertyPath: m_Name
