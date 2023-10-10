@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      frente2_0: 4588874450862810141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

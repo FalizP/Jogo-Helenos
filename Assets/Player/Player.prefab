@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288d736d82f082b4db5740ed9aa3aabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
   playerAnimation: {fileID: 6953258960570949585}
+  speed: 25
 --- !u!114 &6953258960570949585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!1001 &3955663496791175172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197603719928165054, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8292418
+      value: -22.588663
       objectReference: {fileID: 0}
     - target: {fileID: 3197603719928165054, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_LocalRotation.w

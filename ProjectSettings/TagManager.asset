@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Ground
   - Wall
+  - Chave
   layers:
   - Default
   - TransparentFX

@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Quarto_Henry_0: -2351150371054720581
+      Quarto_Henry_1: -265440711479966432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

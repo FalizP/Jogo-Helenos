@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      costas7_0: 5383143499749860907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

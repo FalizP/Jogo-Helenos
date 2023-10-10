@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     float input_x, input_y;
 
-    private void Update()
+    private void FixedUpdate()
     {
         MoveCharacter();
 
@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
 
     private void MoveCharacter()
     {
-        if (DialogueManager.GetInstance().DialogueIsPlaying)
-        { return; };
+        /*if (DialogueManager.GetInstance().DialogueIsPlaying)
+        { return; };*/
 
         input_x = Input.GetAxisRaw("Horizontal");
         input_y = Input.GetAxisRaw("Vertical");

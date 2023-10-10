@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      quadro0002_0: -5734385613734260061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
