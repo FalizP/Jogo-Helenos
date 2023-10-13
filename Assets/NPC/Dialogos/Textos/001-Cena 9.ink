@@ -1,0 +1,1 @@
+Não se atreva a colocar outra coisa que não seja artista. #speaker:Samantha #portrait:Retrato_Samantha
