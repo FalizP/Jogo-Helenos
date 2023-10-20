@@ -5,6 +5,8 @@ using UnityEngine;
 public class etapa : MonoBehaviour
 {
         public GameObject objetoB;
+        public float TempoDeTrocaDeFasse = 15f;
+        
 
         void Start()
         {
@@ -12,7 +14,7 @@ public class etapa : MonoBehaviour
             objetoB.SetActive(false);
 
             // Agenda a ativação do "ObjetoB" após 15 segundos
-            Invoke("AtivarObjetoB", 15f);
+            Invoke("AtivarObjetoB", TempoDeTrocaDeFasse);
         }
 
     void AtivarObjetoB()

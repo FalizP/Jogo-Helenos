@@ -9,6 +9,8 @@ public class ObjetoSc : MonoBehaviour
 
     private float timer;
     private float timer2;
+    public float TempoLimite;
+    public float TempoLimiteClonar;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,7 @@ public class ObjetoSc : MonoBehaviour
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
 
-        if (timer > 2)
+        if (timer > TempoLimiteClonar)
         { 
         
             timer = 0;
@@ -31,7 +33,7 @@ public class ObjetoSc : MonoBehaviour
 
         }
 
-        if (timer2 > 5)
+        if (timer2 > TempoLimite)
         {
 
             timer2 = 0;
