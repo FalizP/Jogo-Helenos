@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerBoss : MonoBehaviour
 {
 
+    [Header("Mini Boss")]
+    [SerializeField] private bool miniBoss;
+
     [SerializeField]
     private Rigidbody2D rigidbody;
 
@@ -13,6 +16,8 @@ public class PlayerBoss : MonoBehaviour
 
     [SerializeField]
     private BoxCollider2D playerCollider, boxCollider, boxCollider1;
+
+    
 
     void Update()
     {
@@ -28,15 +33,17 @@ public class PlayerBoss : MonoBehaviour
 
     private void Start()
     {
-        
         rigidbody = GetComponent<Rigidbody2D>();
 
         playerCollider = GetComponent<BoxCollider2D>();
-        boxCollider = GameObject.Find("Box").GetComponent<BoxCollider2D>();
-        boxCollider1 = GameObject.Find("Box1").GetComponent<BoxCollider2D>();
 
-        Physics2D.IgnoreCollision(playerCollider, boxCollider, true);
-        Physics2D.IgnoreCollision(playerCollider, boxCollider1, true);
+        if (miniBoss)
+        {
+            boxCollider = GameObject.Find("Box").GetComponent<BoxCollider2D>(); 
+            boxCollider1 = GameObject.Find("Box1").GetComponent<BoxCollider2D>();
 
+            Physics2D.IgnoreCollision(playerCollider, boxCollider, true);
+            Physics2D.IgnoreCollision(playerCollider, boxCollider1, true);
+        }
     }
 }
