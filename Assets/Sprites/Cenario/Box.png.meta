@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aec356ddff0c03f4785d61849922c3ef
+guid: 5e5bf24ad48bfed4b87f5014076d9570
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5217027912177820971
-    second: sala_inimigos_0
+      213: 4727633781103762509
+    second: Box_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -80,6 +80,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -92,19 +93,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sala_inimigos_0
+      name: Box_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 453
-        height: 453
+        x: 94
+        y: 130
+        width: 118
+        height: 247
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2528a0ce3b966840800000000000000
-      internalID: 5217027912177820971
+      spriteID: d4c93d630edeb9140800000000000000
+      internalID: 4727633781103762509
       vertices: []
       indices: 
       edges: []
@@ -129,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sala_inimigos_0: 5217027912177820971
+      Box_0: 4727633781103762509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
