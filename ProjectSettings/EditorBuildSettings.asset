@@ -21,7 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Boss.unity
     guid: f7a495b6dfd3cf747825df322d20ae81
   - enabled: 1
+    path: Assets/Scenes/Desenho.unity
+    guid: 947d0dad576a40e429652594108f56e7
+  - enabled: 1
     path: Assets/Scenes/MiniBoss.unity
     guid: 7cbac5f84bf29d74da4d44a9d1082b31
+  - enabled: 1
+    path: Assets/Scenes/Cabana.unity
+    guid: 957a81454ad15fc4caac7467bfe66c07
   m_configObjects: {}
-  m_UseUCBPForAssetBundles: 0
