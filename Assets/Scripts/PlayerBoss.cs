@@ -26,7 +26,7 @@ public class PlayerBoss : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-        Vector2 direcao = new Vector2(horizontal, vertical);
+        Vector2 direcao = new Vector2(horizontal, vertical).normalized;
         this.rigidbody.velocity = direcao * this.velocidadeMovimento;
 
     }
@@ -39,7 +39,7 @@ public class PlayerBoss : MonoBehaviour
 
         if (miniBoss)
         {
-            boxCollider = GameObject.Find("Box").GetComponent<BoxCollider2D>(); 
+            boxCollider = GameObject.Find("Box").GetComponent<BoxCollider2D>();
             boxCollider1 = GameObject.Find("Box1").GetComponent<BoxCollider2D>();
 
             Physics2D.IgnoreCollision(playerCollider, boxCollider, true);

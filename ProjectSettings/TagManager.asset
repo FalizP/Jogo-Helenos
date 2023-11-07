@@ -55,3 +55,9 @@ TagManager:
   - name: Player
     uniqueID: 9607067
     locked: 0
+  - name: Cartas
+    uniqueID: 2002712607
+    locked: 0
+  - name: HUD
+    uniqueID: 3400992557
+    locked: 0
