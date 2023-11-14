@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cabana.unity
     guid: 957a81454ad15fc4caac7467bfe66c07
+  - enabled: 1
+    path: Assets/Scenes/Corrida.unity
+    guid: d194fbade7933ed4a993185a1cb95705
   m_configObjects: {}
