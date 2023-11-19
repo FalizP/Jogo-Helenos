@@ -1,0 +1,1 @@
+Até mais, te vejo mais tarde. #speaker:Ian #portrait:Retrato_Ian

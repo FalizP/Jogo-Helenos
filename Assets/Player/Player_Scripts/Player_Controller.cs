@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         MoveCharacter();
-
     }
 
     private void MoveCharacter()

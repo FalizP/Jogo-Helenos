@@ -1,0 +1,1 @@
+Vamos entrar. #speaker:Samantha #portrait:Retrato_Samantha

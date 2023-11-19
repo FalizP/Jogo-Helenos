@@ -1,0 +1,1 @@
+POR FAVOR ME DEIXE ENTRAR! #speaker:Henri_Shadow #portrait:Retrato_Henri_Shadow

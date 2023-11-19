@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MoveCarro : MonoBehaviour
 {
-    [SerializeField] private float speed = 0.15f;
+    [SerializeField] private float speed = 25f;
     [SerializeField] private TextMeshProUGUI lbPontos;
     public static int pontos = 0;
 
@@ -16,13 +16,21 @@ public class MoveCarro : MonoBehaviour
 
     void Update()
     {
-        MoverCarro();
+        
         AtualizaPontuacao();
+    }
+    
+    private void FixedUpdate()
+    {
+        MoverCarro();
     }
 
     void MoverCarro()
     {
-        transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * speed, 0, 0);
+        // transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * speed, 0, 0);
+
+        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0).normalized;
+        transform.position += speed * Time.deltaTime * move;
     }
 
     void AtualizaPontuacao()
