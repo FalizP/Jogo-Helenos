@@ -5,7 +5,7 @@ using UnityEngine;
 public class etapa : MonoBehaviour
 {
         public GameObject objetoB;
-        public float TempoDeTrocaDeFasse = 15f;
+        public float TempoDeTrocaDeFasse;
         
 
         void Start()

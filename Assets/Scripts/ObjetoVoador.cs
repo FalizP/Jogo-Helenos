@@ -10,6 +10,7 @@ public class ObjetoVoador : MonoBehaviour
     public float force;
     public float tempo;
     public float Proximo;
+    public float rotação;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,8 @@ public class ObjetoVoador : MonoBehaviour
         Vector3 direcction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direcction.x, direcction.y).normalized * force;
 
-        float rot = Mathf.Atan2(-direcction.y, direcction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 45);
+        float rot = Mathf.Atan2(-direcction.y, -direcction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot + rotação);
 
         
     }
@@ -30,11 +31,12 @@ public class ObjetoVoador : MonoBehaviour
     void Update()
     {
         Proximo += Time.deltaTime;
-        if (Proximo > 13) 
+        if (Proximo > tempo) 
         {
 
             Destroy(gameObject);
 
         }
+
     }
 }
