@@ -1,27 +1,49 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+
 public class MoveDoodle : MonoBehaviour
 {
-    Vector2 playerInput;
+    [Header("Velocidade")]
+    [SerializeField] private float speed = 9f;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+
+    Vector3 playerInput;
 
     [Header("Força do Pulo")]
-    [SerializeField] private float force;
- 
+    [SerializeField] private float jumpForce = 10;
+
+    public float minX = 0f, maxX = 10f;
+
     void Start()
     {
-        force = 10;
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = rb.GetComponent<SpriteRenderer>();
     }
-    
+
     void Update()
     {
-        playerInput = new(x: Input.GetAxisRaw("Horizontal"), y: Input.GetAxisRaw("Vertical"));
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(playerInput.x * force, 0), ForceMode2D.Force);
+        playerInput = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+
+        Vector3 velocity = speed * Time.deltaTime * playerInput;
+
+        transform.position += velocity;
+        //Limita as Paredes
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), transform.position.y, transform.position.z);
+
+        switch (playerInput.x)
+        {
+            case -1: spriteRenderer.flipX = true; break;
+            case 0: break;
+            case 1: spriteRenderer.flipX = false; break;
+            default: break;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(0, force), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 }
