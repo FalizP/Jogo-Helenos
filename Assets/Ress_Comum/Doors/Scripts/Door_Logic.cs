@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -39,7 +40,7 @@ public class Door_Logic : MonoBehaviour
     {
         if (interacting.IsPressed() && canInteract)
         {
-            SceneManager.LoadScene(proximaFase);
+            StartCoroutine(TrocarDeFaseComAnimacao());
         }
         else
             return;
@@ -53,6 +54,21 @@ public class Door_Logic : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         canInteract = false;
+    }
+
+    public Animator animacaoDoPortao;
+
+    private IEnumerator TrocarDeFaseComAnimacao()
+    {
+        // Acione a animação no animator
+        if (animacaoDoPortao != null)
+        {
+            animacaoDoPortao.SetTrigger("Transição");
+            yield return new WaitForSeconds(animacaoDoPortao.GetCurrentAnimatorStateInfo(0).length);
+        }
+
+        // Troque de fase
+        SceneManager.LoadScene(proximaFase);
     }
 
 }
