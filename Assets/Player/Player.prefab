@@ -29,6 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4732265607403075971}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.380836, y: -22.147213, z: -10.475661}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,7 +39,6 @@ Transform:
   - {fileID: 1911071443664143034}
   - {fileID: 6121304307839012936}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3566443086469042209
 MonoBehaviour:
@@ -69,7 +69,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 2404888630119364509}
 --- !u!95 &2404888630119364509
 Animator:
-  serializedVersion: 7
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -83,7 +83,6 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -149,7 +148,6 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4732265607403075971}
   m_Enabled: 1
-  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -173,8 +171,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: -6.8714027}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,6 +182,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+  serializedVersion: 2
   m_Size: {x: 5.19, y: 2.9971948}
   m_EdgeRadius: 0
 --- !u!50 &8768825486769762023
@@ -301,6 +299,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 59238491119022397}
     - target: {fileID: 139534994673331552, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 59238491119022397}
+    - target: {fileID: 139534994673331552, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_Lens.FarClipPlane
       value: 1000.08
       objectReference: {fileID: 0}
@@ -310,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 139534994673331552, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 22
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3197603719928165054, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_RootOrder
@@ -326,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197603719928165054, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8292418
+      value: -15.873019
       objectReference: {fileID: 0}
     - target: {fileID: 3197603719928165054, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_LocalRotation.w
@@ -366,7 +368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6005812370496534001, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: orthographic size
-      value: 22
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6665384570007093040, guid: b1b701db12a23cd4b91edf5707644567, type: 3}
       propertyPath: m_Name

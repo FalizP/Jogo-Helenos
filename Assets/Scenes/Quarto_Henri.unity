@@ -279,6 +279,10 @@ PrefabInstance:
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3966242630669098340, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 4368512619040633089, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 13.533356
@@ -374,6 +378,22 @@ PrefabInstance:
     - target: {fileID: 7331218602187556341, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: orthographic size
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331218602187556341, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331218602187556341, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331218602187556341, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331218602187556341, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.73333335
       objectReference: {fileID: 0}
     - target: {fileID: 7355507022899782029, guid: b64287ad87c566c4284f687c1dca3170, type: 3}
       propertyPath: m_IsActive
