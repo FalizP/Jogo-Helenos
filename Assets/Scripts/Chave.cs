@@ -7,10 +7,26 @@ using UnityEngine.SceneManagement;
 public class Chave : MonoBehaviour
 {
 
+    [SerializeField]
     public int chave;
-    public string TrocaCena;
+
+    [SerializeField]
+    public GameObject Portal;
+
+    [SerializeField]
+    public SpriteRenderer Porta;
+
+    [SerializeField]
+    public Sprite PortaAberta;
 
     //colocar no player
+
+    private void Start()
+    {
+            
+        Portal.SetActive(false);
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +44,11 @@ public class Chave : MonoBehaviour
         if (chave >= 3)
         {
 
-            SceneManager.LoadScene(TrocaCena);
+            Portal.SetActive(true);
+            Porta.sprite = PortaAberta;
+
         }
+
     }
+
 }

@@ -17,6 +17,9 @@ public class PlayerBoss : MonoBehaviour
     [SerializeField]
     private BoxCollider2D playerCollider, boxCollider, boxCollider1;
 
+    [SerializeField]
+    private Animator anima;
+
     
 
     void Update()
@@ -28,6 +31,18 @@ public class PlayerBoss : MonoBehaviour
 
         Vector2 direcao = new Vector2(horizontal, vertical).normalized;
         this.rigidbody.velocity = direcao * this.velocidadeMovimento;
+
+        anima.SetFloat("Horizontal", direcao.x);
+        anima.SetFloat("Vertical", direcao.y);
+        anima.SetFloat("Velocidade", direcao.sqrMagnitude);
+
+        if (direcao != Vector2.zero)
+        {
+
+            anima.SetFloat("HorizontalD", direcao.x);
+            anima.SetFloat("VerticalD", direcao.y);
+
+        }
 
     }
 

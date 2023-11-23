@@ -25,7 +25,9 @@ public class Inimigo : MonoBehaviour
     [SerializeField]
     private LayerMask LayerAreaVisao;
 
-   
+    [SerializeField]
+    private LayerMask LayerIgnorarRaycast;
+
 
     // Update is called once per frame
     void Update()
@@ -69,7 +71,8 @@ public class Inimigo : MonoBehaviour
             Vector2 direcao = posicaoAlvo - posicaoAtual;
             direcao = direcao.normalized;
 
-            RaycastHit2D hit = Physics2D.Raycast(posicaoAtual, direcao);
+            RaycastHit2D hit = Physics2D.Raycast(posicaoAtual, direcao, Mathf.Infinity, ~LayerIgnorarRaycast);
+
             if (hit.transform != null)
             {
 

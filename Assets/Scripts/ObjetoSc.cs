@@ -18,7 +18,19 @@ public class ObjetoSc : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Finish"))
+        {
+
+            Destroy(this.gameObject);
+
+        }
+    
+    
+    }
+
+            // Update is called once per frame
     void Update()
     {
 

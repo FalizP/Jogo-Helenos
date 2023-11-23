@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Corrida.unity
     guid: d194fbade7933ed4a993185a1cb95705
+  - enabled: 1
+    path: Assets/Scenes/MenuMeme.unity
+    guid: 10de241f0089fbb47abc98a7c55f205a
   m_configObjects: {}
