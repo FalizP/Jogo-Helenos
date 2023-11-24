@@ -1282,6 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e6ba9caa5c33d4b8ac9064e6c35312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fase: 12
 --- !u!61 &531602333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1972,7 +1973,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2725810105744781444, guid: 43ec18be65cfc6a45bbfa70f5b0c5429, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8510097620810842044, guid: 43ec18be65cfc6a45bbfa70f5b0c5429, type: 3}
       insertIndex: -1
@@ -2005,6 +2007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e6ba9caa5c33d4b8ac9064e6c35312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fase: 12
 --- !u!61 &1349190930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2917,6 +2920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e6ba9caa5c33d4b8ac9064e6c35312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fase: 12
 --- !u!61 &1989808367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3175,6 +3179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e6ba9caa5c33d4b8ac9064e6c35312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fase: 12
 --- !u!61 &2070408377
 BoxCollider2D:
   m_ObjectHideFlags: 0

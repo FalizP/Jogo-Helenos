@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Boss.unity
     guid: f7a495b6dfd3cf747825df322d20ae81
   - enabled: 1
-    path: Assets/Scenes/Desenho.unity
+    path: Assets/Scenes/Desenho_Cabana.unity
     guid: 947d0dad576a40e429652594108f56e7
   - enabled: 1
     path: Assets/Scenes/MiniBoss.unity
@@ -41,4 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sala.unity
     guid: 648aa55ab6c372141a68bba1128d6e28
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: b5698529255ef474ca7a2fd6f84daa42
+  - enabled: 1
+    path: Assets/Scenes/GameOver2.unity
+    guid: 7df95a42a21db8b4a9d7c92d7ce15f7b
+  - enabled: 1
+    path: Assets/Scenes/Desenho_Quarto.unity
+    guid: 4326eef7529b81449b163024a52ae746
   m_configObjects: {}
