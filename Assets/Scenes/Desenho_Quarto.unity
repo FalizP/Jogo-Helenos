@@ -225,7 +225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1355033870121410688, guid: 09ebf682dacf4e3458d350f197f3f400, type: 3}
       propertyPath: faseSaida
-      value: QuartoDoHenri
+      value: QuartoDoHenriQuadro
       objectReference: {fileID: 0}
     - target: {fileID: 2082193800837530688, guid: 09ebf682dacf4e3458d350f197f3f400, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,33 +23,36 @@ public class PlayerBoss : MonoBehaviour
     private Animator anima;
 
     
-    
+
+    private DialogueManager dialogueManager;
+
+
+
     void Update()
     {
 
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
 
+            Vector2 direcao = new Vector2(horizontal, vertical).normalized;
+            this.rigidbody.velocity = direcao * this.velocidadeMovimento;
 
-        Vector2 direcao = new Vector2(horizontal, vertical).normalized;
-        this.rigidbody.velocity = direcao * this.velocidadeMovimento;
+            anima.SetFloat("Horizontal", direcao.x);
+            anima.SetFloat("Vertical", direcao.y);
+            anima.SetFloat("Velocidade", direcao.sqrMagnitude);
 
-        anima.SetFloat("Horizontal", direcao.x);
-        anima.SetFloat("Vertical", direcao.y);
-        anima.SetFloat("Velocidade", direcao.sqrMagnitude);
-
-        if (direcao != Vector2.zero)
-        {
-
-            anima.SetFloat("HorizontalD", direcao.x);
-            anima.SetFloat("VerticalD", direcao.y);
-
-        }
+            if (direcao != Vector2.zero)
+            {
+                anima.SetFloat("HorizontalD", direcao.x);
+                anima.SetFloat("VerticalD", direcao.y);
+            }
 
     }
 
     private void Start()
     {
+
+
         rigidbody = GetComponent<Rigidbody2D>();
 
         playerCollider = GetComponent<BoxCollider2D>();
@@ -62,4 +66,6 @@ public class PlayerBoss : MonoBehaviour
             Physics2D.IgnoreCollision(playerCollider, boxCollider1, true);
         }
     }
+
+
 }
