@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
         if (!DialogueIsPlaying) { return; }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
         {
             ContinueStory();
         }

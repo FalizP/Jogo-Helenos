@@ -21,4 +21,5 @@ public class AnjoSc : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, Target.position, speed * Time.deltaTime);
 
     }
+
 }

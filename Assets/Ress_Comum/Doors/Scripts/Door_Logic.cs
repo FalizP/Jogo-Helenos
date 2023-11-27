@@ -17,7 +17,7 @@ public class Door_Logic : MonoBehaviour
     {
         porta = new Controles_InteracaoComPorta();
     }
-     
+
     private void OnEnable()
     {
         interacting = porta.Player.Interacting;
@@ -40,13 +40,13 @@ public class Door_Logic : MonoBehaviour
     {
         if (interacting.IsPressed() && canInteract)
         {
-            StartCoroutine(TrocarDeFaseComAnimacao());
+           StartCoroutine(TrocarDeFaseComAnimacao());
         }
         else
             return;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         canInteract = true;
     }

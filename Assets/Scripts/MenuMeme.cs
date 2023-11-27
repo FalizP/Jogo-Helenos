@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuMeme : MonoBehaviour
 {
+
+    public int fase;
     
     public void PlayGame()
     {
 
-        SceneManager.LoadSceneAsync(9);
+        SceneManager.LoadSceneAsync(fase);
 
     }
 

@@ -557,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 3286249960909959198, guid: c8cd97706cedb9846a73a5471cf48a21, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 07fcab222bd146a448d4ab450164c572, type: 3}
+      objectReference: {fileID: 4900000, guid: 5953a6f338d27164aadcc7e95f15bb88, type: 3}
     - target: {fileID: 4742372990570481651, guid: c8cd97706cedb9846a73a5471cf48a21, type: 3}
       propertyPath: m_Sprite
       value: 
