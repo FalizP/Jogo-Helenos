@@ -29,6 +29,7 @@ public class DialogueTrigger : MonoBehaviour
         else
         {
             visualCue.SetActive(false);
+           
         }
     }
 
@@ -46,5 +47,7 @@ public class DialogueTrigger : MonoBehaviour
             playerInRange = false;
         }
     }
+
+    
 
 }

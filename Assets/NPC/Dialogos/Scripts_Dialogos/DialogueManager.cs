@@ -13,7 +13,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
 
-
     private Story currentStory;
 
     public bool DialogueIsPlaying { get; private set; }
@@ -42,15 +41,26 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
     }
 
+    private bool isAcceptingInput = true;
+
+    public bool IsAcceptingInput
+    {
+        get { return isAcceptingInput; }
+        set { isAcceptingInput = value; }
+    }
+
+
     private void Update()
     {
         if (!DialogueIsPlaying) { return; }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             ContinueStory();
         }
+
+       
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -71,6 +81,7 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        
     }
 
     private void ContinueStory()
@@ -82,10 +93,14 @@ public class DialogueManager : MonoBehaviour
 
             // Lida das tags
             HandleTags(currentStory.currentTags);
+
+           
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
+            
+           
         }
     }
     private void HandleTags(List<string> currentTags)
@@ -96,7 +111,7 @@ public class DialogueManager : MonoBehaviour
             if (splitTag.Length != 2) { Debug.LogError($"Tag não analisada: {tag}"); }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
-            
+
 
             // Lida com a tag
             switch (tagKey)
