@@ -11,6 +11,7 @@ TagManager:
   - Chave
   - Inimigo
   - Ball
+  - Cacapa
   layers:
   - Default
   - TransparentFX
