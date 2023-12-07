@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // make it available globally
     public BallController branca; // instance of the main ball
+
+    [Header("Posição Inicial Bola Branca")]
+    [SerializeField] private Vector2 InicialBolaBranca = new(0, -4f);
 
     private void Awake()
     {
@@ -19,6 +20,6 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPlayer()
     {   // instantiate a new BallController object
-        Instantiate(branca, Vector2.zero, Quaternion.identity);
+        Instantiate(branca, InicialBolaBranca, Quaternion.identity);
     }
 }
