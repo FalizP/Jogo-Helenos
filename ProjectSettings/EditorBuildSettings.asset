@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Menus/Menu_Principal.unity
-    guid: 47f7263d4f8c4884a8a609e4c9317d2b
   - enabled: 1
     path: Assets/Scenes/MenuMeme.unity
     guid: 10de241f0089fbb47abc98a7c55f205a
@@ -77,4 +74,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tomada06.unity
     guid: 3d4aabf4337fa164bb468d440fb30546
+  - enabled: 1
+    path: Assets/Scenes/Casa_Externa.unity
+    guid: f6cc9f99f8ace864a992b732faa50b60
+  - enabled: 1
+    path: Assets/Scenes/Cabana_Exterior.unity
+    guid: df4fc659088bf5741b8cd0a943be8197
   m_configObjects: {}
