@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MoveCarro : MonoBehaviour
 {
+    [SerializeField]
+    private string faseSaida;
     [SerializeField] private float speed = 25f;
     [SerializeField] private TextMeshProUGUI lbPontos;
     public static int pontos = 0;
@@ -18,6 +20,11 @@ public class MoveCarro : MonoBehaviour
     {
         
         AtualizaPontuacao();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(faseSaida);
+        }
     }
     
     private void FixedUpdate()

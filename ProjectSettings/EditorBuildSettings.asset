@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cabana_Exterior.unity
     guid: df4fc659088bf5741b8cd0a943be8197
+  - enabled: 1
+    path: Assets/Scenes/QuartoDoHenriPC.unity
+    guid: 5bc78781cb3382445beba3a0a635f634
   m_configObjects: {}

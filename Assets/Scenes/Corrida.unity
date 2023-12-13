@@ -452,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4350529807842911147, guid: bef1786c2c965ea49b38496080b5671b, type: 3}
       propertyPath: speed
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4350529807842911147, guid: bef1786c2c965ea49b38496080b5671b, type: 3}
       propertyPath: pontos
@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: lbPontos
       value: 
       objectReference: {fileID: 1264632492}
+    - target: {fileID: 4350529807842911147, guid: bef1786c2c965ea49b38496080b5671b, type: 3}
+      propertyPath: faseSaida
+      value: QuartoDoHenriPC
+      objectReference: {fileID: 0}
     - target: {fileID: 4350529807842911147, guid: bef1786c2c965ea49b38496080b5671b, type: 3}
       propertyPath: pontuacao
       value: 
@@ -646,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960773715056914033, guid: e9bb9dc7ed8f0924f93a50fccabc891c, type: 3}
       propertyPath: speed
-      value: -0.05
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7677600731764290799, guid: e9bb9dc7ed8f0924f93a50fccabc891c, type: 3}
       propertyPath: m_Name
